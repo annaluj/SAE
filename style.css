@@ -1,0 +1,124 @@
+
+@charset "UTF-8";
+
+
+/*
+/* Azul principal
+#4A6FA5
+ */
+
+
+/* Azul claro
+#7699D4
+*/
+
+
+/* Azul bem suave
+#DCE7F5
+*/
+
+
+/* Branco azulado
+#F5F9FF
+*/
+
+
+/* Cinza elegante
+#6B7280
+*/
+
+
+/* Texto escuro
+#1F2937
+*/
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    background-color: #023c92;
+    height: 140px;
+    width: 100%;
+    display: flex;
+    align-items: start;
+}
+
+
+img.menu{
+    margin: 10px;
+    margin: 30px;
+    padding: 4px;
+    width: 30px;
+    height: 40px;
+    margin-left:0px;
+   
+}
+
+.sidebar{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 190px;
+    height: 100vh;
+    background-color: #3260b0;
+    transition: 0.6s;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    transition: left 1s ease;
+}
+
+
+.abrir{
+    left: 0;
+    margin: 0;
+}
+
+
+.sidebar a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.sidebar a:hover{
+    background-color: #4A6FA5;
+}
+
+.btn-fechar{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 5px;
+    z-index: 999; /*controla os elementos que ficam na frente, como se fosse uma camada*/
+}
+
+.btn-fechar img{
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.btn-fechar:hover{
+    transition: 0.1s;
+    background-color: rgba(212, 7, 7, 0.516);
+}
+
+footer{
+    background-color: #062c66;
+    height: 50px;
+    width: 100%;
+}
