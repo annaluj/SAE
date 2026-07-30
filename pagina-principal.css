@@ -1,0 +1,114 @@
+.fundo{
+    padding: 30px;
+    background-color: #a8caf3bc;
+    min-height: 100vh;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.boas-vindas{
+    background: #1f5fa8;
+    color: white;
+    padding: 25px;
+    border-radius: 18px;
+    margin-bottom: 25px;
+}
+
+.boas-vindas h1{
+    margin-bottom: 8px;
+}
+
+.cards{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.card{
+    background: rgb(241, 237, 237);
+    padding: 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    transition: 0.2s;
+    box-shadow: 0px 10px 20px rgba(140, 132, 132, 0.455);
+}
+
+.card h2{
+    color: #1f5fa8;
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #555;
+    line-height: 1.5;
+}
+
+.card button{
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1f5fa8;
+    color: white;
+    cursor: pointer;
+}
+
+.destaque{
+    border-left: 6px solid #1f5fa8;
+}
+.emojis{
+    background: rgb(241, 237, 237);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.emojis{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.emoji{
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.emoji:hover{
+    transform:translateY(-10px);
+}
+
+.emoji:active{
+    transform: scale(0.95);
+}
+
+.emoji:focus{
+    outline: 2px solid #09a015;
+}
+#mensagem{
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+#mensagem.mostrar{
+    opacity: 1;
+}
+
