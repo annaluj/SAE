@@ -26,7 +26,7 @@ if (!isset($_SESSION['usuario_id'])) {
     <input type="text" id="nome" class="inputs" value="<?php echo htmlspecialchars($_SESSION['usuario_nome']); ?>" required readonly><br>
     
     <label for="data">Escolha a melhor data</label>
-    <input type="date" id="data" class="inputs" required><br>
+    <input type="date" id="data" class="inputs" min="<?php echo date('Y-m-d'); ?>" required><br>
     
     <label for="hora">Escolha a hora que deseja a sua consulta:</label>
     <input type="time" id="hora" required> <br>
