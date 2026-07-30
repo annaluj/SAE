@@ -22,6 +22,12 @@ if (empty($data) || empty($hora)) {
     exit();
 }
 
+$hoje = date('Y-m-d');
+if ($data < $hoje) {
+    echo json_encode(["status" => "erro", "mensagem" => "Não é possível agendar uma consulta em uma data passada."]);
+    exit();
+}
+
 $sql = "INSERT INTO agendamentos (usuario_id, data_consulta, horario_consulta) VALUES ('$usuario_id', '$data', '$hora')";
 
 if (mysqli_query($conn, $sql)) {
