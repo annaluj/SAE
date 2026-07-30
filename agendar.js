@@ -1,26 +1,35 @@
 const formConsulta = document.getElementById("formConsulta");
-const mensagemConsulta = document.getElementById("mensagemConsulta");
-const aviso = document.getElementById("aviso");
 
-formConsulta.addEventListener("submit", function(event){
-    event.preventDefault();
+if (formConsulta) {
+    formConsulta.addEventListener("submit", function(event){
+        event.preventDefault();
 
-    const dados = {
-        nome: document.getElementById("nome").value,
-        data: document.getElementById("data").value,
-        hora: document.getElementById("hora").value
-    };
+        const dados = {
+            nome: document.getElementById("nome").value,
+            data: document.getElementById("data").value,
+            hora: document.getElementById("hora").value
+        };
 
-    fetch("agendar.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(dados)
-    })
-    .then(resposta => resposta.json())
-    .then(resultado => {
-        aviso.textContent = "Atenção: nossa equipe irá conferir se esse horário está disponível. Se não estiver, entraremos em contato para reagendar.";
-        mensagemConsulta.textContent = resultado.mensagem;
+        fetch("processar_agendamento.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dados)
+        })
+        .then(resposta => resposta.json())
+        .then(resultado => {
+            if (resultado.status === "sucesso") {
+                alert("✅ " + resultado.mensagem + "\n\nAtenção: nossa equipe irá conferir se esse horário está disponível.");
+                
+                window.location.href = "pagina-principal.php";
+            } else {
+                alert("⚠️ " + resultado.mensagem);
+            }
+        })
+        .catch(erro => {
+            console.error("Erro no envio:", erro);
+            alert("❌ Erro ao enviar o agendamento. Verifique sua conexão.");
+        });
     });
-});
+}
