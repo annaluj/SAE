@@ -9,7 +9,6 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-        // 3. Captura os dados do formulário
         $nome = mysqli_real_escape_string($conn, $_POST['nome']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
         $senha = $_POST['senha'];
@@ -25,14 +24,14 @@
         }
 
         $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-        $sql_verificar = "SELECT id FROM usuarios WHERE email = '$email'";
+        $sql_verificar = "SELECT usuario_id FROM usuarios WHERE email = '$email'";
         $resultado_verificar = mysqli_query($conn, $sql_verificar);
 
         if (mysqli_num_rows($resultado_verificar) > 0) {
             die("Este e-mail já está cadastrado! Tente outro.");
         }
 
-        $sql_inserir = "INSERT INTO usuarios (nome, email, senha_hash, rua, cep, numero, bairro, cidade) 
+        $sql_inserir = "INSERT INTO usuarios (nome, email, senha_hash, rua, cep, numero_casa, bairro, cidade) 
                         VALUES ('$nome', '$email', '$senha_hash', '$rua', '$cep', '$numero', '$bairro', '$cidade')";
 
         if (mysqli_query($conn, $sql_inserir)) {

@@ -1,5 +1,4 @@
 <?php
-
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
@@ -29,7 +28,7 @@
 
             if (password_verify($senha, $usuario['senha_hash'])) {
     
-                $_SESSION['usuario_id'] = $usuario['id'];
+                $_SESSION['usuario_id'] = $usuario['usuario_id'];
                 $_SESSION['usuario_nome'] = $usuario['nome'];
 
                 header("Location: pagina-principal.php");

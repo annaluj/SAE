@@ -17,14 +17,19 @@ $resultado_agendamentos = mysqli_query($conn, $sql_agendamentos);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página principal</title>
     <link rel="stylesheet" href="pagina-principal.css">
-</head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Federo&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,400;1,400&display=swap" rel="stylesheet"></head>
 <body>
-    <main class="fundo">
+    <main class="fundo" >
     <header class="inicio">
         <h1>Olá, <?php echo htmlspecialchars($_SESSION['usuario_nome']); ?></h1>
         <p>Bem-vindo ao SAE (serviço de apoio estudantil)</p>
         
-        <a href="logout.php" style="color: red; text-decoration: none; font-size: 0.9rem;">Sair da conta</a>
+        <a href="index.html"><button class="sair">Sair da conta</button></a>
     </header>
     
     <section class="cards">
@@ -67,11 +72,11 @@ $resultado_agendamentos = mysqli_query($conn, $sql_agendamentos);
         <section class="emojis">
             <h2>Como você está se sentindo hoje?</h2>
             <div class="emojis">
-                <button type="button" class="emoji">😁</button>
-                <button type="button" class="emoji">🙂</button>
-                <button type="button" class="emoji">😐</button>
-                <button type="button" class="emoji">😔</button>
-                <button type="button" class="emoji">😢</button>
+                <button type="button" data-valor="1" class="emoji">😁</button>
+                <button type="button" data-valor="2" class="emoji">🙂</button>
+                <button type="button" data-valor="3" class="emoji">😐</button>
+                <button type="button" data-valor="4" class="emoji">😔</button>
+                <button type="button" data-valor="5" class="emoji">😢</button>
             </div>
             <p id="mensagem"></p>
         </section>

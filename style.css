@@ -33,17 +33,34 @@
 */
 
 
-
-
 *{
     margin: 0;
     padding: 0;
 }
 
+body{
+    background-color: #ccd5e2;
+     word-spacing: 1px;
+    line-height: 30px;
+    word-break: keep-all;
+}
+
+
+.federo-regular {
+  font-family: "Federo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.neuton-extralight {
+  font-family: "Neuton", serif;
+  font-weight: 200;
+  font-style: normal;
+}
 
 header{
     background-color: #023c92;
-    height: 140px;
+    height: 100px;
     width: 100%;
     display: flex;
     align-items: start;
@@ -60,6 +77,82 @@ img.menu{
    
 }
 
+
+
+h1,h2{
+    color: #1F2937;
+    font-family:"Federo", sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 28px;
+    line-height: 30px;
+    margin-bottom: 18px;
+   
+}
+
+ 
+p{
+    font-size: 20px;
+    color: #1F2937;
+    font-family: "Neuton", serif;
+    font-family: "Neuton", serif;
+    word-spacing: 10px;
+}
+
+
+.card{
+    background-color: #abc7ffb8;
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-top: 4px solid #8ebafd;
+    transition: 0.3s ease;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+
+.card:hover{
+    box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+}
+
+.card h2{
+    color: #023c92;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.card p{
+    color: #1F2937;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+
+.card-info{
+    color:  black;
+    
+}
+
+.card-dicas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    gap: 20px;
+    background-color: #a3b7d8;
+
+}
 .sidebar{
     font-family: Georgia, 'Times New Roman', Times, serif;
     position: fixed;
@@ -117,8 +210,93 @@ img.menu{
     background-color: rgba(212, 7, 7, 0.516);
 }
 
+.dicas{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: justify;
+    gap: 40px;
+    margin: 60px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.card-dicas{
+    background-color: #c3d1e4;
+    border-top: 2px solid #4b7ac2;
+    border-radius: 15px;
+    padding: 30px;
+    width: 450px;
+    min-height: 300px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.card-dicas:hover{
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-dicas h2{
+    color: #023c92;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card-dicas ul,
+.card-dicas ol{
+    margin-left: 20px;
+}
+
+.card-dicas li{
+    text-decoration: none;
+    margin-bottom: 12px;
+    color: #1F2937;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.card-dicas:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.card-dicas h2{
+    color: #023c92;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card-dicas ul,
+.card-dicas ol{
+    margin-left: 20px;
+}
+
+.card-dicas li{
+    margin-bottom: 12px;
+    color: #1F2937;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.dicas .card{
+    flex: 1;
+    min-width: 350px;
+}
+
 footer{
     background-color: #062c66;
     height: 50px;
     width: 100%;
+}
+
+footer>p{
+    color: white;
+    text-align: center;
+    font-size: 10px;
+    line-height: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
